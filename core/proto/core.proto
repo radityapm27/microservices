@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package go.micro.srv.core;
+
+message CoreRequest {
+	string userID = 1;
+}
+
+message Product {
+    string productName = 1;
+    string productDescription = 2;
+    int32 price = 3;
+    int32 stock = 4;
+}
+
+message UserInfoResponse {
+    string userID = 1;
+    string userName = 2;
+    string userLocation = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "proto/core.proto";
+
+package go.micro.srv.core;
+
+/* Catalog Section */
+service ProductCatalog{
+	rpc GetProductCatalog(core.CoreRequest) returns (ProductCatalogResponse) {}
+}
+
+message ProductCatalogResponse {
+    Catalog catalogs = 1;
+}
+
+message Catalog {
+    repeated core.Product products = 1;
+}

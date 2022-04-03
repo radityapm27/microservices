@@ -1,0 +1,19 @@
+package utils
+
+// ContextKey ...
+type ContextKey string
+
+const (
+	// Postgres ...
+	Postgres = "postgres"
+	// ContextUserKey ...
+	ContextUserKey ContextKey = "user"
+	// ContextTokenKey ...
+	ContextTokenKey ContextKey = "token"
+	// ContextHostKey
+	ContextHostKey ContextKey = "host"
+	// DateLayout ...
+	DateLayout = "2006-01-02"
+	// TimestampLayout ...
+	TimestampLayout = "15:04"
+)

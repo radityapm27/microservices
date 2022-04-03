@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "proto/core.proto";
+
+package go.micro.srv.core;
+
+/* Cart Section */
+service ShoppingCart{
+	rpc GetShoppingCartByUserId(core.CoreRequest) returns (ShoppingCartResponse) {}
+}
+
+message ShoppingCartResponse {
+    Cart cart = 1;
+}
+
+message Cart {
+    core.UserInfoResponse userInfo = 1;
+    repeated ProductCart productCart = 2;
+}
+
+message ProductCart {
+    core.Product product = 1;
+    int32 quantity = 2;
+}

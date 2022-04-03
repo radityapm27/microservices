@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "proto/core.proto";
+
+package go.micro.srv.core;
+
+/* User Section */
+service User{
+	rpc GetUserById(core.CoreRequest) returns (core.UserInfoResponse) {}
+    rpc ListOfUser(core.CoreRequest) returns (ListUserResponse) {}
+}
+
+message ListUserResponse {
+    repeated core.UserInfoResponse users = 1;
+}
+
