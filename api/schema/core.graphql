@@ -1,0 +1,19 @@
+
+type Query {
+	shoppingCart: ShoppingCart!
+	productCatalog: ProductCatalog!
+	user: User!
+}
+
+type Product {
+	productName: String!
+	productDescription: String!
+	price: Int!
+	stock: Int!
+}
+
+type UserInfo {
+    userID: String!
+    userName: String!
+    userLocation: String!
+}

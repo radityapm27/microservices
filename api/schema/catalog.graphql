@@ -1,0 +1,8 @@
+# Catalog Schema ..
+type ProductCatalog {
+    getProductCatalog: Catalogs!
+}
+
+type Catalogs {
+    catalogs: [Product!]!
+}

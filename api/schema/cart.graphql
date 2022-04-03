@@ -1,0 +1,14 @@
+# Cart Schema ..
+type ShoppingCart {
+    getShoppingCartByUserId(userID: String!): Carts!
+}
+
+type Carts {
+    userInfo: UserInfo!
+    cart: [ProductCart!]!
+}
+
+type ProductCart {
+    product: Product!
+    quantity: Int!
+}

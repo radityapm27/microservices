@@ -1,0 +1,9 @@
+# User Schema ..
+type User {
+    getUserInfoById(userID: String!): UserInfo!
+    listOfUser: ListUser!
+}
+
+type ListUser {
+    users: [UserInfo!]!
+}
